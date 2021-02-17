@@ -104,6 +104,7 @@ if let surname = dict3[1]["cognome"]{
 //print(dict3[1]["cognome"]!)
 //print(dict3[1][0]) !!ERRORE!!
 
+//iterator nei dizionari
 var dict4 = [1:"pippo",2:"mario"]
 for item in dict4.keys{ //chiavi vengono messe in ordine a minchia a differenza degli array, non è un problema perchè tanto è per chiave
     print(item)
@@ -111,3 +112,16 @@ for item in dict4.keys{ //chiavi vengono messe in ordine a minchia a differenza 
 for item in dict4{
     print(item)
 }
+dict4.updateValue("Lillo", forKey: 2)
+print(dict4)
+
+for (key,value) in dict{
+    print(key,value)
+}
+for (key,value) in dict4{
+    print(key,value)
+}
+//let array1: Set = [1,3,5,7,9]
+//let array2: Set = [1,2,3]
+//array1.subtracting(array2)
+//print(array1)

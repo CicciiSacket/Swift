@@ -22,7 +22,7 @@ print(http200.statusCode)
 print(http200.statusMessage)
 
 //ARRAY! Collezione di oggetti omogeneii
-var array = [1,2,3] //implicitamente ha capitop che è un array di interi
+var array = [1,2,3] //implicitamente ha capito che è un array di interi
 var arrayEsp:[Int] = [1,2,3] //esplicitamente
 var arrayEmpty = [Int]() //nodo funzionale per array vuoto
 var test:[Double] = []
@@ -106,7 +106,7 @@ if let surname = dict3[1]["cognome"]{
 
 //iterator nei dizionari
 var dict4 = [1:"pippo",2:"mario"]
-for item in dict4.keys{ //chiavi vengono messe in ordine a minchia a differenza degli array, non è un problema perchè tanto è per chiave
+for item in dict4.keys{ //chiavi vengono messe in ordine a caso a differenza degli array, non è un problema perchè tanto è per chiave
     print(item)
 }
 for item in dict4{
@@ -115,7 +115,7 @@ for item in dict4{
 dict4.updateValue("Lillo", forKey: 2)
 print(dict4)
 
-for (key,value) in dict{
+for (key,value) in dict{ //(key,value) è una tupla
     print(key,value)
 }
 for (key,value) in dict4{

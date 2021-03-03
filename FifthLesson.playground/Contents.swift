@@ -44,25 +44,18 @@ var city: [String:[String]] = [
     "D": ["Domodossola"],
     "E": ["Empoli"]
 ]
-func cityFilter(_ city:[String:[String]],_ text:String)->String{
-    guard city.keys.contains(text) else {return "nil"}
-    switch text {
-    case "A":
-        return "\(city[text]!)"
-            case "B":
-        return "\(city[text]!)"
-    case "C":
-        return "\(city[text]!)"
-    case "D":
-        return "\(city[text]!)"
-    case "E":
-        return "\(city[text]!)"
-    default:
-        return ""
+func cityFilter(_ city:[String:[String]],_ text:String?)->[String]?{
+    var cityFind:[String] = []
+    guard let text = text else {return nil}
+    let firstChar:String = String(text.prefix(1))
+    guard city.keys.contains(firstChar) else {return nil}
+    for item in city[firstChar]! {
+        if item.hasPrefix(text){
+            cityFind.append(item)
+        }
     }
-    
+    return cityFind
 }
-print(cityFilter(city,"A"))
-
-var comune = "Asti"
-print(comune.hasPrefix("As"))
+if let printer = (cityFilter(city,"As")){
+    print(printer)
+}

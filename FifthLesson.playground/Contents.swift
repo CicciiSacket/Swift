@@ -47,7 +47,7 @@ var city: [String:[String]] = [
 func cityFilter(_ city:[String:[String]],_ text:String?)->[String]?{
     var cityFind:[String] = []
     guard let text = text else {return nil}
-    let firstChar:String = String(text.prefix(1))
+    let firstChar:String = text.prefix(1).uppercased()
     guard city.keys.contains(firstChar) else {return nil}
     for item in city[firstChar]! {
         if item.hasPrefix(text){

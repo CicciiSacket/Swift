@@ -47,7 +47,7 @@ pluto.votoCorrente = "Lucia" //cosi richiamo il set!!
 
 pluto.votoCorrente
 
-// -ESERCIZIO AUTO- //
+// - ESERCIZIO AUTO - //
 
 let currentDateTime = Date()
 

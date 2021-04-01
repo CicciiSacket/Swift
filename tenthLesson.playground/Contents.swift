@@ -76,9 +76,9 @@ class News {
     var title: String
     var text: String
     var datePublication: Date
-    var autore:String
+    var autore:Autore
     
-    init(_ title: String,_ text: String,_ datePublication: Date,_ autore:String) {
+    init(_ title: String,_ text: String,_ datePublication: Date,_ autore:Autore) {
         self.title = title
         self.text = text
         self.datePublication = Date()
@@ -86,19 +86,19 @@ class News {
     }
     
     func myData () -> String {
-        return ("\(self.title), \(self.text), \(self.datePublication), \(self.autore)")
+        return ("\(self.title), \(self.text), \(self.datePublication), \(self.autore.myData())")
     }
 }
 
 class videoNews: News {
     var video:Bool
     
-    init(_ title: String,_ text: String,_ datePublication: Date,_ autore:String,_ video: Bool) {
+    init(_ title: String,_ text: String,_ datePublication: Date,_ autore:Autore,_ video: Bool) {
         self.video = video
         super.init(title,text,datePublication,autore)
     }
     override func myData () -> String {
-        return ("\(self.title), \(self.text), \(self.datePublication), \(self.autore),\(self.video)")
+        return ("\(self.title), \(self.text), \(self.datePublication), \(self.autore.myData()),\(self.video)")
     }
 }
 
@@ -129,25 +129,47 @@ class Autore {
 
 class Gestore { //aggiungere una notizia, aggiungere una notizia video, return numero di newsvideo, return news classic, tornare ultimo video o news
     var newsTotal: [String] = []
-    var videoNewsTotal : [videoNews] = []
+    var videoNewsTotal : [String] = []
     
-    init(_ newsTotal: [String],_ videoNewsTotal : [videoNews]) {
+    init(_ newsTotal: [String],_ videoNewsTotal : [String]) {
         self.newsTotal = newsTotal
         self.videoNewsTotal = videoNewsTotal
     }
     
+    func myData () -> String {
+        return("\(self.newsTotal) \n \(self.videoNewsTotal)")
+    }
+    
     func addNews(_ news: News) -> [String]{
-        let news:News = news
         self.newsTotal.append(news.myData())
         return newsTotal
     }
+    
+    func addNewsVideo(_ newsVideo: videoNews) -> [String] {
+        self.videoNewsTotal.append(newsVideo.myData())
+        return videoNewsTotal
+    }
+    
+    func videNewsCount() -> Int {
+        return self.videoNewsTotal.count
+    }
+    
+    func newsCount() -> Int {
+        return self.newsTotal.count
+    }
+    
 }
 
 func main() {
     let Autore1: Autore = Autore.init("Ciccio", "Sacco", "ciccio.com")
-    let news1 = News.init("PrimoArticolo", "TestoPrimoArticolo", Date(), Autore1.myData())
+    let news1 = News.init("PrimoArticolo", "TestoPrimoArticolo", Date(), Autore1)
+    let newsVideo1 = videoNews.init("PrimoArticolo", "TestoPrimoArticolo", Date(), Autore1,true)
     let Gestore1: Gestore = Gestore.init([],[])
+    
     Gestore1.addNews(news1)
-    print(Gestore1.newsTotal)
+    Gestore1.addNewsVideo(newsVideo1)
+    Gestore1.videNewsCount()
+    Gestore1.newsCount()
+    Gestore1.myData()
 }
 main()

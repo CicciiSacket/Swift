@@ -13,6 +13,11 @@
 		1F16336B261DBF550070D137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F163369261DBF550070D137 /* Main.storyboard */; };
 		1F16336D261DBF580070D137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F16336C261DBF580070D137 /* Assets.xcassets */; };
 		1F163370261DBF580070D137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F16336E261DBF580070D137 /* LaunchScreen.storyboard */; };
+		1F2385E626369BAD000F0AE4 /* Second_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2385E526369BAD000F0AE4 /* Second_ViewController.swift */; };
+		1F8E51502636B00B00A05BBF /* Animale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E514F2636B00B00A05BBF /* Animale.swift */; };
+		1F8E51532636B10700A05BBF /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E51522636B10700A05BBF /* Cat.swift */; };
+		1F8E51562636B16B00A05BBF /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E51552636B16B00A05BBF /* Bird.swift */; };
+		1FEF266E2636AD48002E4B34 /* 3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF266D2636AD48002E4B34 /* 3VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		1F16336C261DBF580070D137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F16336F261DBF580070D137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F163371261DBF580070D137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F2385E526369BAD000F0AE4 /* Second_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Second_ViewController.swift; sourceTree = "<group>"; };
+		1F8E514F2636B00B00A05BBF /* Animale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animale.swift; sourceTree = "<group>"; };
+		1F8E51522636B10700A05BBF /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		1F8E51552636B16B00A05BBF /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		1FEF266D2636AD48002E4B34 /* 3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,28 @@
 		1F163362261DBF550070D137 /* FirstProjectsIOS */ = {
 			isa = PBXGroup;
 			children = (
+				1F8E514E2636AF7500A05BBF /* Models */,
+				1F2385E526369BAD000F0AE4 /* Second_ViewController.swift */,
 				1F163363261DBF550070D137 /* AppDelegate.swift */,
 				1F163365261DBF550070D137 /* SceneDelegate.swift */,
 				1F163367261DBF550070D137 /* ViewController.swift */,
 				1F163369261DBF550070D137 /* Main.storyboard */,
+				1FEF266D2636AD48002E4B34 /* 3VC.swift */,
 				1F16336C261DBF580070D137 /* Assets.xcassets */,
 				1F16336E261DBF580070D137 /* LaunchScreen.storyboard */,
 				1F163371261DBF580070D137 /* Info.plist */,
 			);
 			path = FirstProjectsIOS;
+			sourceTree = "<group>";
+		};
+		1F8E514E2636AF7500A05BBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F8E514F2636B00B00A05BBF /* Animale.swift */,
+				1F8E51552636B16B00A05BBF /* Bird.swift */,
+				1F8E51522636B10700A05BBF /* Cat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2385E626369BAD000F0AE4 /* Second_ViewController.swift in Sources */,
 				1F163368261DBF550070D137 /* ViewController.swift in Sources */,
 				1F163364261DBF550070D137 /* AppDelegate.swift in Sources */,
+				1FEF266E2636AD48002E4B34 /* 3VC.swift in Sources */,
 				1F163366261DBF550070D137 /* SceneDelegate.swift in Sources */,
+				1F8E51532636B10700A05BBF /* Cat.swift in Sources */,
+				1F8E51562636B16B00A05BBF /* Bird.swift in Sources */,
+				1F8E51502636B00B00A05BBF /* Animale.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
